@@ -1,8 +1,161 @@
-@media screen and (max-width:768px){
-    .slides{
-        margin:0 10px;
+@media screen and (max-width:991px){
+  header div nav.navbar{
+    padding: 0 0.2rem;
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
+  header div nav.navbar div.container-nav-content{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+  }
+  #carrinho-e-saldo-mobile{
+    gap: 0.5rem;
+    display: flex;
+  }
+  .saldo{
+    margin: 0 1rem;
+  }
+  .navbar-collapse{
+    flex-grow: 1;
+    width: 100%;
+  }
+    .navbar-brand{
+      height:50%;
+      padding: 0;
+      flex: 1;
+      width: 100%;
     }
-    .swiper-navBtn{
-        display: none;
+    #navbarNav{
+      align-items: start;
     }
+    #navbarNav #carrinho-e-saldo{
+    visibility: hidden;
+    display: none;
+    }
+   button.btn-shopping#carrinho{
+    margin: 0.5rem 0;
+    }
+    .btn-login{
+      margin: 0.5rem 0;
+    }
+   #three .div-list li{
+    font-size: 14px;
+   }
+#four .tab-content #cursosNossosProdutos{
+  gap: 0.5rem;
 }
+#four .card-cursos-nossos-produtos{
+  width: 13rem;
+  height: 13rem;
+  padding: 1rem 1rem;
+}
+#four h4 {
+  font-size: 12px;
+  line-height: normal;
+}
+.cards-professores{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 16px;
+}
+.seven .card-professor{
+  padding: 1rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid #f5f5f5;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.card-title{
+  font-size: 16px;
+}
+.eight #cards-depoimentos{
+  gap: 1rem;
+}
+#cards-nossos-aprovados .card{
+  align-items: center;
+  padding: 0.4rem;
+  height: 12.5rem;
+  width: 10.5rem;
+  line-height: normal;
+  gap: 0.3rem;
+  box-shadow: 6px 6px 16px rgba(135, 134, 134, 0.2);
+  border: 1px solid rgb(243, 242, 242);
+  border-radius: 14px;
+}
+    }
+
+    @media screen and (max-width:870px){
+      #four .tab-content{
+        width: auto;
+        align-items: center;
+      }
+      #four .tab-content #cursosNossosProdutos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1rem;
+        align-items: center;
+        justify-items: center;
+      }
+      .card.card-cursos-nossos-produtos{
+         width: 16rem;
+         height: 12rem;
+      }
+      .eight #cards-depoimentos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0.6rem;
+      }
+      #cards-depoimentos .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 10rem;
+        border: 0;
+        border-radius: 12px;
+      }
+      #cards-nossos-aprovados {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.2rem 0.2rem;
+      }
+      #cards-nossos-aprovados .card {
+        align-items: center;
+        height: 12.5rem;
+        width: 11.3rem;
+        line-height: normal;
+        gap: 0.3rem;
+        box-shadow: 6px 6px 16px rgba(135, 134, 134, 0.2);
+        border: 1px solid rgb(243, 242, 242);
+        border-radius: 14px;
+      }
+      #footer-content {
+        display: flex;
+        flex-direction: row;
+        height: 220px;
+        gap: 0.5rem;
+      }
+      #left-content {
+        padding: 1rem;
+        font-size: 14px;
+        align-items: start;
+        width: 35%;
+      }
+      #right-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+        align-items: start;
+        width: 60%;
+        gap: 1rem;
+      }
+
+    }

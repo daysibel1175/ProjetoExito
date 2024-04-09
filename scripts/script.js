@@ -1,10 +1,9 @@
 // Initialize Swiper
   var swiper = new Swiper(".miSwiper", {
-    slidesPerView: 2,
-    spaceBetween: 5,
     loop: true,
     autoplay:true,
-    autoplayTimeout:900,
+    autoplayTimeout:700,
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -18,14 +17,17 @@
     0:{
       slidesPerView:1
     },
-     550:{
+    525:{
+      slidesPerView:1
+    },
+     800:{
       slidesPerView:2
      },
-     850:{
-      slidesPerView:3
+     920:{
+      slidesPerView:3.2
      },
      1220:{
-      slidesPerView:4
+      slidesPerView:4.4
      }
    }
   });

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./visual/styles.css">
+  <link rel="stylesheet" href="visual/mediaQ.css">
+  <link rel="stylesheet" href="visual/mobile.css">
   <!--bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -21,71 +23,81 @@
   <!-- Swipper CSS -->
   <link rel="stylesheet" href="./visual/swiper-bundle.min.css">
   <title>CURSO EXITO</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <header>
-    <div class="nav-container">
-      <nav class="navbar fixed-top navbar-expand-lg">
-        <div class="container-fluid">
-          <img src="./svg/Logo.svg" alt="logo" id="logo" />
-          <!--botao dropdown-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cursos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Professores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Para quem é indicado</a>
-              </li>
-            </ul>
-          </div>
-          <div class="item-carrinho">
-            <button type="button" class="btn position-relative cmp">
-              <img src="./svg/carrinhoDeCompras.svg" alt="Ca" /> <span
-                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">1 <span
-                  class="visually-hidden">unread messages</span></span>
+    <div class="container-fluid px-0">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container container-nav-content px-0 d-flex ">
+          <a href=""><img class="navbar-brand left" src="./svg/Logo.svg" alt="logo" id="logo" /></a>
+           <!-- carrinho de compras mobile -->
+           <div class="d-lg-none" id="carrinho-e-saldo-mobile"> <!-- Este div sera visivel só em tela pequena -->
+            <button type="button" class="btn position-relative btn-shopping" id="">
+              <img src="./svg/carrinhoDeCompras.svg" alt="" /> 
+              <span class="visually-show position-absolute right-0 translate-middle badge rounded-pill bg-success m-0">
+                10
+              </span>
+              <span class="saldo" >$ 0.00</span>
             </button>
-            <span>$ 0.00</span>
+               <!--botao dropdown-->
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
           </div>
-
-          <button type="button" class="btn btn-primary">Login</button>
+          
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cursos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Professores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Para quem é indicado</a>
+                </li>
+              </ul>
+              <div id="carrinho-e-saldo">
+                <button type="button" class="btn position-relative btn-shopping" id="carrinho">
+                  <img src="./svg/carrinhoDeCompras.svg" alt="" /> 
+                  <span class="visually-show position-absolute right-0 translate-middle badge rounded-pill bg-success">
+                    10
+                  </span>
+                </button>
+                <span class="saldo">$ 0.00</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-login">Login</button>
+            </div>
         </div>
       </nav>
-
-
+      
     </div>
 
   </header>
   <main>
+    <div class="container-fluid px-0">
     <section>
-      <div class="one">
+      <div id="one">
         <div class="textOne">
           <h1>Curso Preparatório 100% online ao vivo</h1>
           <p>
             Serviço diferenciado e eficaz, com metodologia própria e professores
             altamente capacitados
           </p>
-          <button type="button" class="btn btn-danger">Conhecer Cursos</button>
+          <button type="button" class="btn btn-danger"><a href="./cursos/cursos.html">Conhecer Cursos</a></button>
         </div>
-        <div class="imgOne">
-          <img src="./svg/ImgMain.svg" alt="" width="550rem" height="500rem" />
+        <div class="divImgOne">
+          <img id="imgOne" src="./svg/ImgMain.svg" alt="" />
         </div>
       </div>
     </section>
-    <section class="two">
+    <section id="two">
       <div>
         <span>+200</span>
         <p>Alunos</p>
@@ -103,89 +115,108 @@
         <p>Instrutores</p>
       </div>
     </section>
-    <section class="three">
-      <img src="./imgs/imgSection2.png" alt="" />
+    <section id="three">
+      <div id="container-img-section-three">
+        <img src="./imgs/imgSection3.png" alt="" />
+      </div>
       <div class="div-list">
         <div>
           <h2>Sobre o curso</h2>
           <p>O Curso Êxito tem ajudado jovens a melhorar seu desempenho escolar e a conquistar vagas em:</p>
         </div>
-        <p>
+      
         <ul>
           <li>Escolas de Aplicação (UPE/UFPE).</li>
           <li>Escolas Técnicas (ETE/IFPE)</li>
           <li> Concursos públicos e vestibulares (SSA/UPE e ENEM).</li>
         </ul>
         </p>
-        <button type="button" class="btn btn-primary botonA">Conhecer Cursos</button>
+        <button type="button" class="btn btn-primary btn-section-three">Conhecer Cursos</button>
       </div>
     </section>
     <section>
-      <div class="four">
-        <h2>Nossos Produtos</h2>
-        <div class="titles">
-          <h3>Cursos</h3>
-          <h3>Monitoria</h3>
+      <div id="four">
+        <div>
+          <h2>Nossos Produtos</h2>
         </div>
-
-        <div class="blocks">
-          <div class="card-one">
+        
+        <div class="titles">
+          <nav>
+            <div class="nav nav-tabs">
+              <a class="nav-item nav-link active" id="cursos-section-four" data-toggle="tab" href="#cursosNossosProdutos" role="tab"
+                aria-controls="cursosNossosProdutos" aria-selected="true"><h3>Cursos</h3></a>
+              <a class="nav-item nav-link" id="mentorias-section-four" data-toggle="tab" href="#mentoriasNossosProdutos" role="tab"
+                aria-controls="mentoriasNossosProdutos" aria-selected="false"><h3>Mentorias</h3></a>
+            </div>
+          </nav>
+        </div>
+ <!-- conteudo das divs -->
+      <div class="tab-content">
+        <div id="cursosNossosProdutos" class="tab-pane fade show active" role="tabpanel" aria-labelledby="cursos-section-four">
+          <div class="card card-cursos-nossos-produtos">
             <h4>3° ano do Ensino Fundamental</h4>
             <p>Crianças desses anos já podem estudar conosco e melhorar a leitura, oralidade e escrita</p>
             <a class="card-link" href="#">Ver Mais</a>
           </div>
-          <div class="card-one">
+          <div class="card card-cursos-nossos-produtos">
             <h4>4° ao 6° ano do
               Ensino Fundamental</h4>
             <p>Preparatório para Escolas de Aplicação (FCAP/UPE e Cap/UFPE) e Colégio Militar (CMR).</p>
             <a class="card-link" href="#">Ver Mais</a>
           </div>
-          <div class="card-one">
+          <div class="card card-cursos-nossos-produtos">
             <h4>8° ao 9º ano do
               Ensino Fundamental</h4>
             <p>Preparatório para Escolas Técnicas Estaduais (ETE e IFPE).</p>
             <a class="card-link" href="#">Ver Mais</a>
           </div>
-          <div class="card-one">
+          <div class="card card-cursos-nossos-produtos">
             <h4>1° ao 3° ano do
               Ensino Médio</h4>
             <p>Preparatório para UPE e ENEM seriados.</p>
             <a class="card-link" href="#">Ver Mais</a>
           </div>
         </div>
-
+<div id="mentoriasNossosProdutos" class="tab-pane fade" role="tabpanel" aria-labelledby="mentoria">
+<h3>Ola</h3>
+</div>
       </div>
 
     </section>
     <section>
-      <div class="five">
-        <div class="text-five">
-          <h2>Faça a Diferença</h2>
-          <p>Ao escolher o Curso Êxito, você opta por um serviço de alta qualidade com os melhores professores da
-            região, que se destacam pela experiência, afetividade, prazer em lecionar, metodologia própria e
-            acompanhamento diário. <br>
-            Oferecemos diversos cursos, desde Aprimoramento Escolar a Preparatórios para Escolas de Aplicação, Colégios
-            Militares e Escolas Técnicas de toda região brasileira.</p>
-          <button type="button" class="btn btn-danger">Conhecer Cursos</button>
+      <div id="five">
+        <div id="text-five">
+          <div id="text-five-content">
+            <h2>Faça a Diferença</h2>
+            <p>Ao escolher o Curso Êxito, você opta por um serviço de alta qualidade com os melhores professores da
+              região, que se destacam pela experiência, afetividade, prazer em lecionar, metodologia própria e
+              acompanhamento diário. <br>
+              Oferecemos diversos cursos, desde Aprimoramento Escolar a Preparatórios para Escolas de Aplicação, Colégios
+              Militares e Escolas Técnicas de toda região brasileira.</p>
+            <button type="button" class="btn btn-danger">Conhecer Cursos</button>
+          </div>
+          
 
         </div>
-        <img class="imgOne" src="./svg/imgSection3.svg" alt="" width="600rem" height="500rem">
+        <div id="img-five-container">
+          <img id="img-five" src="./svg/imgSection3.svg" alt="" >
+        </div>
       </div>
 
     </section>
     <section>
 
-      <div class="six">
+      <div id="six">
         <h2>Nossos Cursos</h2>
 
         <div class="subtitles">
           <nav>
-            <div class="nav">
-              <a class="nav-item nav-link active" id="cursosTitles" data-toggle="tab" href="#cursos" role="tab"
+            <div class="nav-subtitles">
+              <a class="nav-item nav-link active" id="cursosTitles" data-toggle="tab" href="#cursos-carrousel" role="tab"
                 aria-controls="nav-home" aria-selected="true">Cursos</a>
-              <a class="nav-item nav-link" id="mentoriasTitles" data-toggle="tab" href="#mentorias" role="tab"
+              <a class="nav-item nav-link" id="mentoriasTitles" data-toggle="tab" href="#mentorias-carrousel" role="tab"
                 aria-controls="nav-profile" aria-selected="false">Mentorias</a>
-              <a class="nav-item nav-link" id="preparatorioTitles" data-toggle="tab" href="#preparatorio" role="tab"
+              <a class="nav-item nav-link" id="preparatorioTitles" data-toggle="tab" href="#preparatorio-carrousel" role="tab"
                 aria-controls="nav-contact" aria-selected="false">Preparatório</a>
             </div>
           </nav>
@@ -195,17 +226,17 @@
         <!-- conteudo das divs -->
         <div class="tab-content" id="nav-tabContent">
           <!-- primera div Cursos -->
-          <div class="tab-pane fade show active" id="cursos" role="tabpanel" aria-labelledby="cursosTitles">
+          <div class="tab-pane fade show active" id="cursos-carrousel" role="tabpanel" aria-labelledby="cursosTitles">
 
             <div class="swiper miSwiper">
               <div class="slides  swiper-wrapper">
                 <div class="cards swiper-slide">
                   <div class="card">
-                    <img class="card-imgC" src="./svg/curso1.svg" alt="" width="260px" height="300px">
+                    <img class="img-de-cards-carrusel" src="./svg/img-curso-ingles.svg" alt="">
                     <h4>Inglês Kids 2023</h4>
                     <div class="card-content">
-                      <div class="dos">
-                        <img class="icones" src="./svg/userIcon.svg" alt="icon">
+                      <div class="card-content-header">
+                        <img class="icones" src="./svg/userIcone.svg" alt="icon">
                         <span class="turmas">0 Turmas</span>
                       </div>
                       <div class="stars">
@@ -222,12 +253,12 @@
                 </div>
                 <div class="cards swiper-slide">
                   <div class="card">
-                    <img class="card-imgC" src="./svg/curso2.svg" alt="" width="260px" height="300px">
+                    <img class="img-de-cards-carrusel" src="./svg/img-curso-matematica.svg" alt="">
                     <h4>
                       Matemática Aplicada 2022</h4>
                     <div class="card-content">
-                      <div class="dos">
-                        <img class="icones" src="./svg/userIcon.svg" alt="icon">
+                      <div class="card-content-header">
+                        <img class="icones" src="./svg/userIcone.svg" alt="icon">
                         <span class="turmas">37 Turmas</span>
                       </div>
                       <div class="stars">
@@ -244,11 +275,11 @@
 
                 <div class="cards swiper-slide">
                   <div class="card">
-                    <img class="card-imgC" src="./svg/curso3.svg" alt="" width="260px" height="300px">
+                    <img class="img-de-cards-carrusel" src="./svg/img-curso-redacao.svg" alt="" >
                     <h4>Redação Kids 2023</h4>
                     <div class="card-content">
-                      <div class="dos">
-                        <img class="icones" src="./svg/userIcon.svg" alt="icon">
+                      <div class="card-content-header">
+                        <img class="icones" src="./svg/userIcone.svg" alt="icon">
                         <span class="turmas">0 Turmas</span>
                       </div>
                       <div class="stars">
@@ -265,11 +296,11 @@
                 </div>
                 <div class="cards swiper-slide">
                   <div class="card">
-                    <img class="card-imgC" src="./svg/curso3.svg" alt="" width="260px" height="300px">
+                    <img class="img-de-cards-carrusel" src="./svg/img-curso-matematica.svg" alt="" >
                     <h4>Redação Kids 2023</h4>
                     <div class="card-content">
-                      <div class="dos">
-                        <img class="icones" src="./svg/userIcon.svg" alt="icon">
+                      <div class="card-content-header">
+                        <img class="icones" src="./svg/userIcone.svg" alt="icon">
                         <span class="turmas">0 Turmas</span>
                       </div>
                       <div class="stars">
@@ -286,11 +317,11 @@
                 </div>
                 <div class="cards swiper-slide">
                   <div class="card">
-                    <img class="card-imgC" src="./svg/curso3.svg" alt="" width="260px" height="300px">
+                    <img class="img-de-cards-carrusel" src="./svg/img-curso-redacao.svg" alt="" >
                     <h4>Redação Kids 2023</h4>
                     <div class="card-content">
-                      <div class="dos">
-                        <img class="icones" src="./svg/userIcon.svg" alt="icon">
+                      <div class="card-content-header">
+                        <img class="icones" src="./svg/userIcone.svg" alt="icon">
                         <span class="turmas">0 Turmas</span>
                       </div>
                       <div class="stars">
@@ -315,14 +346,14 @@
             </div>
           </div>
           <!-- div para mentoria -->
-          <div class="tab-pane fade" id="mentorias" role="tabpanel" aria-labelledby="mentoriasTitles">
+          <div class="tab-pane fade" id="mentorias-carrousel" role="tabpanel" aria-labelledby="mentoriasTitles">
 
             <div class="mentoria">
               <h2>Olá</h2>
             </div>
           </div>
           <!-- div para preparatorio -->
-          <div class="tab-pane fade" id="preparatorio" role="tabpanel" aria-labelledby="preparatorioTitles">
+          <div class="tab-pane fade" id="preparatorio-carrousel" role="tabpanel" aria-labelledby="preparatorioTitles">
             <h1>hi hi hi</h1>
           </div>
         </div>
@@ -330,13 +361,13 @@
       </div>
       <!-- fin da section -->
     </section>
-    <section class="seven ">
+    <section>
       <div class="seven">
         <h2>Nossos Professores</h2>
 
-        <div class="cardsP">
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/beatriz.svg" alt="" srcset="">
+        <div class="cards-professores">
+          <div class="card-professor card">
+            <img class="img-top-prof" src="./svg/img-prof-beatriz.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Beatriz Araguao</h3>
@@ -345,8 +376,8 @@
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/natana.svg" alt="" srcset="">
+          <div class="card-professor card">
+            <img class="img-top-prof" src="./svg/img-prof-natana.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Natana Silva</h3>
@@ -355,8 +386,8 @@
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/emerson.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-emerson.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Emerson Carlos</h3>
@@ -364,8 +395,8 @@
 
             </div>
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/eduardoLuiz.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-eduardoLuiz.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Eduardo Luiz</h3>
@@ -374,8 +405,8 @@
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/camila.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-camila.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Camila Nunes</h3>
@@ -384,8 +415,8 @@
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/Eduardo.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-Eduardo.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Eduardo Silva</h3>
@@ -394,150 +425,365 @@
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/vinicius.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-vinicius.svg" alt="" srcset="">
             <div class="card-body">
 
               <h3 class="card-title">Vinicius Nascimento</h3>
-              <p class="card-text"><small class="text-muted">Ciencias / Biologia / Quimica</small></p>
+              <p class="card-text"><small class="text-muted">Ciencias /Biologia /Quimica</small></p>
 
             </div>
 
           </div>
-          <div class="cardP card">
-            <img class="card-img-top" src="./svg/carlos.svg" alt="" srcset="">
+          <div class="card-professor card ver-mais">
+            <img class="img-top-prof" src="./svg/img-prof-carlos.svg" alt="" srcset="">
             <div class="card-body">
-              Carlos Eduardo</h3>
+              <h3 class="card-title">Carlos Eduardo</h3>
               <p class="card-text"><small class="text-muted">Matematica</small></p>
 
             </div>
 
           </div>
         </div>
+        <div class="d-lg-none botaoVerMaisContainer">
+          <button class="btn btn-danger" id="botaoVerMais">Ver mais</button>
+        </div>
       </div>
-
+     
     </section>
 
     <section>
       <div class="eight">
+      <h2>O que dizem sobre nós</h2>
+      <div id="cards-depoimentos">
+        <div class="card" id="depoimento1">
+          <div class="card-body">
+            <div class="text-depoimento">
+              <h3 class="card-title">Hugo Vinicius</h3>
+              <p class="card-text"><small>Administracao / Cabo</small></p>
+            </div>
+           
+            <div>
+              <button class="btn-play"><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
+            </div>
+          </div>
+       
+        </div>
+        <div class="card" id="depoimento2">
+          <div class="card-body">
+            <div class="text-depoimento">
+              <h3 class="card-title">Hugo Vinicius</h3>
+              <p class="card-text"><small>Administracao / Cabo</small></p>
+            </div>
+           
+            <div >
+              <button class="btn-play"><img  src="./svg/botaoPlay.svg" alt="" srcset=""></button>
+            </div> 
+          </div>
+       
+        </div>
+        <div class="card" id="depoimento3">
+          <div class="card-body">
+            <div class="text-depoimento">
+              <h3 class="card-title">Hugo Vinicius</h3>
+              <p class="card-text"><small>Administracao / Cabo</small></p>
+            </div>
+           
+            <div>
+              <button class="btn-play"><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
+            </div>
+          </div>
+       
+        </div>
+        <div class="card"  id="depoimento4">
+          <div class="card-body">
+            <div class="text-depoimento">
+              <h3 class="card-title">Hugo Vinicius</h3>
+              <p class="card-text"><small>Administracao / Cabo</small></p>
+            </div>
+           
+            <div>
+              <button class="btn-play"><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+     
+    </div>
+    </section>
+    <section>
+      <div id="nine">
+        <h2>Nossos Aprovados</h2>
+
+          <div id="cards-nossos-aprovados">
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+              <img class="card-img-top" src="./svg/img-nosso-aprovado1.svg" alt="">
+              <h3 class="card-title">Mathias T</h3>
+              <p class="card-text">Logistica</p>
+              <p><small>(Epitacio Pessoa/Cabo)</small></p>
+            </div>
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado5.svg" alt="">
+              <h3 class="card-title">Sam N</h3>
+              <p class="card-text">Redes de Computadores</p>
+              <p><small>(Luis Lacerda/Cabo)</small></p>
+            </div>
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado4.svg" alt="">
+              <h3 class="card-title">Mark M</h3>
+              <p class="card-text">Logistica</p>
+              <p><small>(Administracao/Cabo)</small></p>
+            </div>
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado5.svg" alt="">
+              <h3 class="card-title">Sam N</h3>
+              <p class="card-text">Redes de Computadores</p>
+              <p><small>(Luis Lacerda/Cabo)</small></p>
+            </div>
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado2.svg" alt="">
+              <h3 class="card-title">Isabele K</h3>
+              <p class="card-text">Matematica</p>
+              <p><small>(luis Lacerda/Cabo)</small></p>
+            </div>
+            <div class="card">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado3.svg" alt="">
+              <h3 class="card-title">Isabele K</h3>
+              <p class="card-text">Logistica</p>
+              <p><small>(Administracao/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado6.svg" alt="">
+              <h3 class="card-title">Luis B</h3>
+              <p class="card-text">Administracao</p>
+              <p><small>(Epitacio Pessoa/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado7.svg" alt="">
+              <h3 class="card-title">Isabele K</h3>
+              <p class="card-text">Logistica</p>
+              <p><small>(Luis Lacerda/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado6.svg" alt="">
+              <h3 class="card-title">Luis B</h3>
+              <p class="card-text">Administracao</p>
+              <p><small>(Epitacio Pessoa/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado8.svg" alt="">
+              <h3 class="card-title">Isabele K</h3>
+              <p class="card-text">Redes de Computadores</p>
+              <p><small>(Epitacio Pessoa/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado9.svg" alt="">
+              <h3 class="card-title">Lucas C</h3>
+              <p class="card-text">Administracao</p>
+              <p><small>(Luis Lacerda/Cabo)</small></p>
+            </div>
+            <div class="card ver-mais-aprovados">
+              <img class="iconeETE" src="svg/iconeETE.svg" alt="">
+
+              <img class="card-img-top" src="svg/img-nosso-aprovado11.svg" alt="">
+              <h3 class="card-title">Isabele K</h3>
+              <p class="card-text">Redes de Computadores</p>
+              <p><small>(Epitacio Pessoa/Cabo)</small></p>
+            </div>
+          </div>
+          <div class="d-lg-none botaoVerMaisContainer">
+            <button class="btn btn-danger" id="botaoVerMaisAprovados">Ver mais</button>
+          </div>
 
       </div>
-      <h2>O que dizem sobre nós</h2>
-      <div>
-        <h3></h3>
-        <p></p>
-        <button><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
-      </div>
-      <div>
-        <h3></h3>
-        <p></p>
-        <button><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
-      </div>
-      <div>
-        <h3></h3>
-        <p></p>
-        <button><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
-      </div>
-      <div>
-        <h3></h3>
-        <p></p>
-        <button><img src="./svg/botaoPlay.svg" alt="" srcset=""></button>
-      </div>
+      
     </section>
     <section>
-      <h2>Nossos Aprovados</h2>
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <p></p>
-      </div>
-    </section>
-    <section>
-      <img src="./svg/ImgDF.svg" alt="">
-      <h2>Dúvidas Frecuentes</h2>
-      <div>
-        <h3>O que é o Curso Êxito?</h3>
-        <p>O Curso Êxito é um preparatório online e ao vivo que oferece um serviço de acompanhamento para exames de
-          seleção e melhoramento de rendimento escolar com muita eficácia, pois tem uma equipe de professores
-          comprometidos com a educação, capacitados e experientes.</p>
-      </div>
-      <div>
-        <h3>Para quem é indicado os nossos serviços ?</h3>
-      </div>
-      <div>
-        <h3>Como serão as aulas no Curso Êxito ?</h3>
-      </div>
-      <div>
-        <h3>Quais as condições de pagamentos ?</h3>
-      </div>
-      <div>
-        <h3>Quanto tempo terei acesso à plataforma ?</h3>
-      </div>
-      <div>
-        <h3>Ao comprar um curso oferecidos, o que o aluno terá direito?</h3>
-      </div>
-    </section>
-    <section>
-      <p>Inscreva-se e receba novidades sobre cursos, preparatórios e mentoria!!!</p>
-      <label for="email" pl></label>
-      <input type="email" placeholder="Digite seu e-mail">
-      <button>Enviar</button>
-    </section>
+      <div id="ten">
+        <div id="container-img-duvidas-frecuentes" class="container">
+          <img id="img-duvidas-frecuentes" src="./svg/img-duvidas-frecuentes.svg" alt="">
+        </div>
+        <div id="duvidas-frecuentes-content">
+          <h2>Dúvidas Frecuentes</h2>
+          <div class="accordion accordion-flush" id="accordionExample">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  O que é o Curso Êxito?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>O Curso Êxito é um preparatório online e ao vivo que oferece um serviço de acompanhamento para exames de
+                    seleção e melhoramento de rendimento escolar com muita eficácia, pois tem uma equipe de professores
+                    comprometidos com a educação, capacitados e experientes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Para quem é indicado os nossos serviços ?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 vazio
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Como serão as aulas no Curso Êxito ?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 vazio
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Quais as condições de pagamentos ?
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 vazio
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Quanto tempo terei acesso à plataforma ?
+                </button>
+              </h3>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 vazio
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Ao comprar um curso oferecidos, o que o aluno terá direito?
+                </button>
+              </h3>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 vazio
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        </div>
+      </section>
   </main>
   <footer>
-    <div>
-      <img src="./svg/Logo.svg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+    <div id="container-footer">
+      <nav class="navbar navbar-light gradient-custom justify-content-space-between p-4">
+        <div class="nav-content-footer">
+         <div class="title-footer">
+           <h1>Inscreva-se e receba novidades sobre cursos, preparatórios e mentoria!!!</h1>
+         </div>
+
+         <form class="form-inline">
+           <input class="form-control mr-sm-2" type="email" placeholder="cursoexito@gmail.com" aria-label="Search">
+           <button class="btn btn-primary my-2 my-sm-0" type="submit">Enviar</button>
+         </form>
+        </div>
+        
+       </nav>
+   <div id="footer-content">
+     <div id="left-content">
+       <img id="img-footer" src="./svg/Logo.svg" alt="">
+       <p id="text-left-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua.</p>
+     </div>
+     <div id="right-content">
+     <div >
+       <ul>
+         <li><h4>Institucional</h4></li>
+         <li>Home</li>
+         <li>Sobre nos</li>
+         <li>cursos</li>
+         <li>Contato</li>
+       </ul>
+     </div>
+     <div>
+       
+       <ul>
+         <li><h4>Produtos</h4></li>
+         <li>Cursos</li>
+         <li>Monitoria</li>
+         <li>Preparatorio</li>
+       </ul>
+     </div>
+     <div>
+       
+       <ul>
+         <li><h4>Ajuda</h4></li>
+         <li>Falar Conosco</li>
+         <li>Preguntas Frecuentes</li>
+       </ul>
+     </div>
+     <div>
+       <div id="contato-redes-sociais">
+         <div class="contato-e-redes">
+           <h4>Contatos</h4>
+           <a href=""><img class="footer-icon" src="./svg/iconEmail.svg" alt="">cursoexito@gmail.com</a>
+           <a href=""><img class="footer-icon" src="./svg/phoneIcone.svg" alt="">(61) 9 9862-3659</a>
+         </div>
+         <div class="contato-e-redes">
+           <h4>Redes Sociais</h4>
+           <div id="redes-sociais-icones">
+             <a href=""><img class="footer-icon" src="svg/facebookIcone.svg" alt=""></a>
+             <a href=""><img class="footer-icon" src="svg/whatsappIcone.svg" alt=""></a>
+             <a href=""><img class="footer-icon" src="svg/instagramIcone.svg" alt=""></a>
+           </div>
+           
+         </div>
+       </div>
+     </div>
+     </div>
+     </div>
+     <hr>
+     <div id="rodape" >
+     <span>Curso Êxito LTDA - CNPJ 041.121.144/0001-83</span>
+     <span>&copy; 2023 - Curso ÊXITO Todos os direitos reservados.</span>
+     <span>Desenvolvido por <img id="logoGuaraSoft" src="./svg/logoGuaraSoft.svg" alt=""></span>
+   </div>
     </div>
-    <div>
-      <h4>Institucional</h4>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Produtos</h4>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Ajuda</h4>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div>
-      <div>
-        <h4>Contatos</h4>
-        <ul>
-          <li><a href=""><img src="./svg/iconEmail.svg" alt="">cursoexito@gmail.com</a></li>
-          <li><img src="" alt=""><img src="./svg/phone.svg" alt="">(61) 9 9862-3659</li>
-        </ul>
-      </div>
-      <div>
-        <h4></h4>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-      </div>
-    </div>
-    <hr>
-    <span>Curso Êxito LTDA - CNPJ 041.121.144/0001-83</span>
-    <span>© 2023 - Curso ÊXITO Todos os direitos reservados.</span>
-    <span>Desenvolvido por</span>
-    <span><img src="./svg/logoF.svg" alt=""></span>
+       
+
   </footer>
 
 
@@ -554,9 +800,12 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 
 
