@@ -89,6 +89,10 @@
   border: 1px solid rgb(243, 242, 242);
   border-radius: 14px;
 }
+#footer-content-mobile{
+  display: none;
+  visibility: 0;
+}
     }
 
     @media screen and (max-width:870px){
