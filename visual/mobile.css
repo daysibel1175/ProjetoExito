@@ -127,7 +127,6 @@
   #footer-content{
     flex-direction: column;
     height: 60%;
-    background-color: aliceblue;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -136,13 +135,11 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    background-color: aquamarine;
     justify-items: center;
     width: 100%;
   }
   #right-content{
     width: 100%;
-    background-color: blanchedalmond;
   }
   #rodape{
     flex-direction: column;
