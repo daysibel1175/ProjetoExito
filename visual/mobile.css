@@ -1,30 +1,30 @@
-@media screen and (max-width:870px){
-    header div nav.navbar div.container-nav-content{
-        align-items: center;
-        width: 100%;
-        display: flex;
-        margin: 0 0.5rem;
-      }
-    #one{
-        flex-direction: column-reverse;
-        word-wrap: break-word;
-    }
-    .textOne{
-        width: 100%;
-    }
-#two{
- display: grid;
- grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  flex-shrink: 0;
-  margin:1rem 0;
-  height: auto;
-  justify-items: center;
-  position: relative;
-}
-#two::after {
+@media screen and (max-width: 870px) {
+  header div nav.navbar div.container-nav-content {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    margin: 0 0.5rem;
+  }
+  #one {
+    flex-direction: column-reverse;
+    word-wrap: break-word;
+  }
+  .textOne {
+    width: 100%;
+  }
+  #two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin: 1rem 0;
+    height: auto;
+    justify-items: center;
+    position: relative;
+  }
+  #two::after {
     content: "";
     position: absolute;
     top: 25%;
@@ -34,7 +34,7 @@
     height: 20%;
     background-color: #626262;
   }
-  
+
   #two::before {
     content: "";
     position: absolute;
@@ -45,152 +45,158 @@
     height: 20%;
     background-color: #626262;
   }
-#three{
+  #three {
     flex-direction: column;
     margin-bottom: 1rem;
     padding: 0.2rem;
-}
-.div-list{
+  }
+  .div-list {
     width: 100%;
     padding: 0 1rem;
-}
-#four .tab-content #cursosNossosProdutos{
+  }
+  #four .tab-content #cursosNossosProdutos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-#four .card-cursos-nossos-produtos{
+  }
+  #four .card-cursos-nossos-produtos {
     width: 100%;
     padding: 1rem 1rem;
   }
-  #five{
+  #five {
     flex-direction: column-reverse;
   }
-  #text-five{
+  #text-five {
     width: 100%;
   }
-  .seven .cards-professores{
+  .seven .cards-professores {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     justify-items: center;
     width: 90%;
   }
-  .seven .card-professor{
+  .seven .card-professor {
     width: 100%;
-    border: 0.1rem solid #c4c4c4 ;
+    border: 0.1rem solid #c4c4c4;
   }
-  .botonVerMaisContainer{
+  .botonVerMaisContainer {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  #cards-nossos-aprovados{
+  #cards-nossos-aprovados {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     width: 100%;
     justify-items: center;
   }
-  #cards-nossos-aprovados .card{
+  #cards-nossos-aprovados .card {
     width: 100%;
   }
-  #ten{
+  #ten {
     flex-direction: column;
   }
-  #ten div#duvidas-frecuentes-content{
-    width: 100%
+  #ten div#duvidas-frecuentes-content {
+    width: 100%;
   }
-  footer nav.navbar{
+  footer nav.navbar {
     flex-direction: column;
     width: 100%;
   }
-  .nav-content-footer{
+  .nav-content-footer {
     width: 100%;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     display: flex;
   }
-  footer nav.navbar .nav-content-footer #title-footer{
+  footer nav.navbar .nav-content-footer #title-footer {
     width: 100%;
     justify-items: center;
     align-items: center;
   }
-  footer nav.navbar .nav-content-footer #title-footer h1{
+  footer nav.navbar .nav-content-footer #title-footer h1 {
     width: 100%;
   }
-  footer nav form.form-inline{
+  footer nav form.form-inline {
     width: 100%;
     justify-content: center;
     gap: 0;
   }
-  #footer-content{
+  #footer-content {
     flex-direction: column;
     height: 60%;
     width: 100%;
     justify-content: center;
     align-items: center;
   }
-  #left-content{
+  #left-content {
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
     width: 100%;
   }
-  #right-content{
+  #right-content {
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  #contato-redes-sociais{
+  #contato-redes-sociais {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     padding: 1rem;
     align-items: center;
   }
-  .footer-hidden{
+  .footer-hidden {
     display: none;
     visibility: 0;
   }
-  #right-content #footer-content-mobile{
+  #right-content #footer-content-mobile {
     width: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
   }
-  #right-content #footer-content-mobile #accordion-footer{
+  #right-content #footer-content-mobile #accordion-footer {
     width: 100%;
   }
-  #right-content #footer-content-mobile #accordion-footer .accordion-item ul li{
+  #right-content
+    #footer-content-mobile
+    #accordion-footer
+    .accordion-item
+    ul
+    li {
     width: 100%;
   }
   #ten .accordion .accordion-item {
     border: 0;
   }
-  .accordion-button, .accordion-button.collapse{
-  background-color: aqua;
+  .accordion-button,
+  .accordion-button.collapse {
+    background-color: aqua;
   }
-  #rodape{
+  #rodape {
     flex-direction: column;
   }
 }
-@media screen and (max-width:600px){
-  .seven .cards-professores{
-    grid-template-columns:1fr;
+@media screen and (max-width: 600px) {
+  .seven .cards-professores {
+    grid-template-columns: 1fr;
   }
   .eight #cards-depoimentos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
-  .footer-hidden{
+  .footer-hidden {
     display: none;
     visibility: 0;
   }
-  #rodape{
+  #rodape {
     width: 100%;
     padding: 0.2rem;
   }
