@@ -335,12 +335,13 @@ div.titles nav div.nav-tabs .nav-link:hover {
   gap: 2rem;
   display: flex;
 }
-.subtitles button, .titles button{
+.subtitles button h3, .titles button{
   display: inline-flex;
   color: #9c9c9c;
   position: relative;
   font-weight: 500;
   font-size: 20px;
+  padding-bottom:0.5rem ;
 }
 div.titles nav div.nav-tabs .nav-link.active{
   border-bottom: 0;
@@ -353,7 +354,7 @@ div.titles nav div.nav-tabs .nav-link.active{
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
 background-color: transparent;
 }
-.subtitles button::after {
+.subtitles button h3::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -363,7 +364,7 @@ background-color: transparent;
   left: 0;
   bottom: 0;
 }
-.subtitles button.active::after {
+.subtitles button.active h3::after {
   width: 100%;
 }
 #six #nav-tabContent {
