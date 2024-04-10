@@ -21,49 +21,59 @@
     <title>CURSOS</title>
 </head>
 <body>
-    <header>
-        <div class="container-fluid px-0">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container container-nav-content px-0 d-flex justify-content-between">
-              <a href=""><img class="navbar-brand" src="/svg/Logo.svg" alt="logo" id="logo" /></a>
-             
-                <!--botao dropdown-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Cursos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Professores</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link">Para quem é indicado</a>
-                    </li>
-                  </ul>
-                  <div id="carrinho-e-saldo">
-                    <button type="button" class="btn position-relative btn-shopping" id="carrinho">
-                      <img src="/svg/carrinhoDeCompras.svg" alt="" /> 
-                      <span class="visually-show position-absolute right-0 translate-middle badge rounded-pill bg-secondary">
-                        10
-                      </span>
-                    </button>
-                    <span>$ 0.00</span>
-                  </div>
-                  <button type="button" class="btn btn-primary btn-login">Login</button>
-                </div>
+  <header>
+    <div class="container-fluid px-0">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container container-nav-content px-0 d-flex ">
+          <a href=""><img class="navbar-brand left" src="/svg/Logo.svg" alt="logo" id="logo" /></a>
+          <!-- carrinho de compras mobile -->
+          <div class="d-lg-none" id="carrinho-e-saldo-mobile"> <!-- Este div sera visivel só em tela pequena -->
+            <button type="button" class="btn position-relative btn-shopping" id="">
+              <img src="/svg/carrinhoDeCompras.svg" alt="" />
+              <span class="visually-show position-absolute right-0 translate-middle badge rounded-pill bg-success m-0">
+                10
+              </span>
+              <span class="saldo">$ 0.00</span>
+            </button>
+            <!--botao dropdown-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Professores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Para quem é indicado</a>
+              </li>
+            </ul>
+            <div id="carrinho-e-saldo">
+              <button type="button" class="btn position-relative btn-shopping" id="carrinho">
+                <img src="./svg/carrinhoDeCompras.svg" alt="" />
+                <span class="visually-show position-absolute right-0 translate-middle badge rounded-pill bg-success">
+                  10
+                </span>
+              </button>
+              <span class="saldo">$ 0.00</span>
             </div>
-          </nav>
-          
+            <button type="button" class="btn btn-primary btn-login">Login</button>
+          </div>
         </div>
-      </header>
+      </nav>
+
+    </div>
+
+  </header>
       <main>
         <section>
             <div id="section-one">
@@ -81,5 +91,9 @@
    </div>
         </section>
       </main>
+
+
+      <script src="./scripts/swiper-bundle.min.js"></script>
+
 </body>
 </html>

@@ -219,6 +219,19 @@ div.titles nav div.nav-tabs .nav-link:hover {
   align-items: center;
   justify-content: space-between;
 }
+.titles button::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #007db0;
+  transition: 800ms;
+  left: 0;
+  bottom: 0;
+}
+.titles button.active::after {
+  width: 100%;
+}
 #four .tab-content {
   width: 100%;
 }
@@ -322,14 +335,26 @@ div.titles nav div.nav-tabs .nav-link:hover {
   gap: 2rem;
   display: flex;
 }
-.subtitles a {
+.subtitles button, .titles button{
   display: inline-flex;
   color: #a1a1a1;
   position: relative;
   font-weight: 500;
   font-size: 22px;
+  background-color: rgb(168, 168, 103);
 }
-.subtitles a::after {
+div.titles nav div.nav-tabs .nav-link.active{
+  border-bottom: 0;
+  border: 0;
+  border-radius: 0%;
+}
+.nav-pills .nav-item .nav-link.active{
+  color: #000;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+background-color: transparent;
+}
+.subtitles button::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -339,7 +364,7 @@ div.titles nav div.nav-tabs .nav-link:hover {
   left: 0;
   bottom: 0;
 }
-.subtitles a.active::after {
+.subtitles button.active::after {
   width: 100%;
 }
 #six #nav-tabContent {

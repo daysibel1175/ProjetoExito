@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="visual/mediaQ.css">
   <link rel="stylesheet" href="visual/mobile.css">
   <!--bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -143,22 +142,20 @@
           <div class="titles">
             <nav>
               <div class="nav nav-tabs">
-                <a class="nav-item nav-link active" id="cursos-section-four" data-toggle="tab"
-                  href="#cursosNossosProdutos" role="tab" aria-controls="cursosNossosProdutos" aria-selected="true">
-                  <h3>Cursos</h3>
-                </a>
-                <a class="nav-item nav-link" id="mentorias-section-four" data-toggle="tab"
-                  href="#mentoriasNossosProdutos" role="tab" aria-controls="mentoriasNossosProdutos"
-                  aria-selected="false">
-                  <h3>Mentorias</h3>
-                </a>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active bg-transparent" id="cursos-section-four" data-bs-toggle="pill" data-bs-target="#cursosNossosProdutos" type="button" role="tab" aria-controls="cursosNossosProdutos" aria-selected="true">Cursos</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link bg-transparent" id="mentorias-section-four" data-bs-toggle="pill" data-bs-target="#mentoriasNossosProdutos" type="button" role="tab" aria-controls="mentoriasNossosProdutos" aria-selected="false">Mentorias</button>
+                  </li>
+                </ul>
               </div>
             </nav>
           </div>
           <!-- conteudo das divs -->
           <div class="tab-content">
-            <div id="cursosNossosProdutos" class="tab-pane fade show active" role="tabpanel"
-              aria-labelledby="cursos-section-four">
+            <div class="tab-pane fade show active" id="cursosNossosProdutos" role="tabpanel" aria-labelledby="cursos-section-four">
               <div class="card card-cursos-nossos-produtos">
                 <h4>3° ano do Ensino Fundamental</h4>
                 <p>Crianças desses anos já podem estudar conosco e melhorar a leitura, oralidade e escrita</p>
@@ -183,11 +180,10 @@
                 <a class="card-link" href="#">Ver Mais</a>
               </div>
             </div>
-            <div id="mentoriasNossosProdutos" class="tab-pane fade" role="tabpanel" aria-labelledby="mentoria">
-              <h3>Ola</h3>
+            <div class="tab-pane fade show active" id="mentoriasNossosProdutos" role="tabpanel" aria-labelledby="mentorias-section-four">
+              <h3>EM BREVE</h3>
             </div>
           </div>
-
       </section>
       <section>
         <div id="five">
@@ -212,24 +208,25 @@
 
       </section>
       <section>
-
         <div id="six">
           <h2>Nossos Cursos</h2>
-
           <div class="subtitles">
             <nav>
               <div class="nav-subtitles">
-                <a class="nav-item nav-link active" id="cursosTitles" data-toggle="tab" href="#cursos-carrousel"
-                  role="tab" aria-controls="nav-home" aria-selected="true">Cursos</a>
-                <a class="nav-item nav-link" id="mentoriasTitles" data-toggle="tab" href="#mentorias-carrousel"
-                  role="tab" aria-controls="nav-profile" aria-selected="false">Mentorias</a>
-                <a class="nav-item nav-link" id="preparatorioTitles" data-toggle="tab" href="#preparatorio-carrousel"
-                  role="tab" aria-controls="nav-contact" aria-selected="false">Preparatório</a>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active bg-transparent" id="cursosTitles" data-bs-toggle="pill" data-bs-target="#cursos-carrousel" type="button" role="tab" aria-controls="cursos-carrousel" aria-selected="true">Cursos</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link bg-transparent" id="mentoriasTitles" data-bs-toggle="pill" data-bs-target="#mentorias-carrousel" type="button" role="tab" aria-controls="mentorias-carrousel" aria-selected="false">Mentorias</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link bg-transparent" id="preparatorioTitles" data-bs-toggle="pill" data-bs-target="#preparatorio-carrousel" type="button" role="tab" aria-controls="preparatorio-carrousel" aria-selected="false">Preparatório</button>
+                  </li>
+                </ul>
               </div>
             </nav>
-
           </div>
-
           <!-- conteudo das divs -->
           <div class="tab-content" id="nav-tabContent">
             <!-- primera div Cursos -->
@@ -349,19 +346,17 @@
                   <div class="swiper-button-prev swiper-navBtn"></div>
                   <div class="swiper-pagination"></div>
                 </div>
-
               </div>
             </div>
             <!-- div para mentoria -->
             <div class="tab-pane fade" id="mentorias-carrousel" role="tabpanel" aria-labelledby="mentoriasTitles">
-
               <div class="mentoria">
-                <h2>Olá</h2>
+                <h1>EM BREVE</h1>
               </div>
             </div>
             <!-- div para preparatorio -->
             <div class="tab-pane fade" id="preparatorio-carrousel" role="tabpanel" aria-labelledby="preparatorioTitles">
-              <h1>hi hi hi</h1>
+              <h1>EM BREVE</h1>
             </div>
           </div>
 
@@ -663,7 +658,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    vazio
+                    EM BREVE
                   </div>
                 </div>
               </div>
@@ -677,7 +672,7 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    vazio
+                    EM BREVE
                   </div>
                 </div>
               </div>
@@ -691,7 +686,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    vazio
+                    EM BREVE
                   </div>
                 </div>
               </div>
@@ -705,7 +700,7 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    vazio
+                    EM BREVE
                   </div>
                 </div>
               </div>
@@ -719,7 +714,7 @@
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    vazio
+                    EM BREVE
                   </div>
                 </div>
               </div>
@@ -889,18 +884,10 @@
   <script src="./scripts/script.js"></script>
   <script src="/scripts/stars.js"></script>
   <script src="scripts/index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
