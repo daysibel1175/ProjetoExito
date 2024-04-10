@@ -337,11 +337,10 @@ div.titles nav div.nav-tabs .nav-link:hover {
 }
 .subtitles button, .titles button{
   display: inline-flex;
-  color: #a1a1a1;
+  color: #9c9c9c;
   position: relative;
   font-weight: 500;
-  font-size: 22px;
-  background-color: rgb(168, 168, 103);
+  font-size: 20px;
 }
 div.titles nav div.nav-tabs .nav-link.active{
   border-bottom: 0;

@@ -17,10 +17,7 @@
     0:{
       slidesPerView:1
     },
-    525:{
-      slidesPerView:1
-    },
-     800:{
+     580:{
       slidesPerView:2
      },
      920:{
