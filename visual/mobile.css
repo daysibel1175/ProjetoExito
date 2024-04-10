@@ -68,6 +68,9 @@
   #text-five {
     width: 100%;
   }
+  #six{
+    padding: 0 0.5rem;
+  }
   .seven .cards-professores {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -184,6 +187,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .subtitles button{
+    padding: 0 0.5rem;
+  }
   .subtitles button h3{
     font-size: 16px;
   }
