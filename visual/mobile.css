@@ -165,7 +165,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    height: max-content;
+    max-height: 651px;
   }
   #right-content #footer-content-mobile #accordion-footer {
     width: 100%;
