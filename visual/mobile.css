@@ -56,11 +56,11 @@
   }
   #four .tab-content #cursosNossosProdutos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   #four .card-cursos-nossos-produtos {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
   #five {
     flex-direction: column-reverse;

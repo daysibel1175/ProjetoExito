@@ -41,6 +41,9 @@
     .btn-login{
       margin: 0.5rem 0;
     }
+    main{
+      transition: margin-top 0.3s ease-in-out;
+    }
    #three .div-list li{
     font-size: 14px;
    }
