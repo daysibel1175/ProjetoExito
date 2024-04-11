@@ -129,7 +129,7 @@
   }
   #footer-content {
     flex-direction: column;
-    height: 60%;
+    height: auto;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -153,6 +153,7 @@
     width: 100%;
     padding: 1rem;
     align-items: center;
+    margin-top: 0.5rem;
   }
   .footer-hidden {
     display: none;
@@ -163,6 +164,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    height: max-content;
   }
   #right-content #footer-content-mobile #accordion-footer {
     width: 100%;

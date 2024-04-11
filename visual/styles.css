@@ -245,7 +245,7 @@ div.titles nav div.nav-tabs .nav-link:hover {
 }
 #four .card-cursos-nossos-produtos {
   display: flex;
-  width: 14rem;
+  width: 16rem;
   height: max-content;
   padding: 2rem 1.8rem;
   flex-direction: column;

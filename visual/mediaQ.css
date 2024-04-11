@@ -56,8 +56,11 @@
   padding: 1rem 1rem;
 }
 #four h4 {
-  font-size: 12px;
+  font-size: 16px;
   line-height: normal;
+}
+#four p{
+  font-size: 14px;
 }
 .cards-professores{
   display: grid;
