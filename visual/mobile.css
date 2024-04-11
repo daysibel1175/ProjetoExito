@@ -154,6 +154,7 @@
     padding: 1rem;
     align-items: center;
     margin-top: 0.5rem;
+    transition: margin-top 0.3s ease-in-out;
   }
   .footer-hidden {
     display: none;

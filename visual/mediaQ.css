@@ -99,6 +99,9 @@
   display: none;
   visibility: 0;
 }
+footer{
+  transition: margin-top 0.3s ease-in-out;
+}
     }
 
     @media screen and (max-width:870px){
