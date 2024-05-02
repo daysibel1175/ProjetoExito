@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 let elementosOcultos = false;
 
 window.onload = function() {
-  if (window.innerWidth < 821) { // Si la pantalla es pequeña
+  if (window.innerWidth < 821) { // Se a tela for pequena 
     let elementos = document.getElementsByClassName('ver-mais');
     for (let i = 0; i < elementos.length; i++) {
       elementos[i].classList.add('d-none');
@@ -17,10 +17,10 @@ document.getElementById('botaoVerMais').addEventListener('click', function() {
   let elementos = document.getElementsByClassName('ver-mais');
   for (let i = 0; i < elementos.length; i++) {
     if (elementosOcultos) {
-      // Si los elementos están ocultos, los mostramos
+      // Se os elementos estao ocultos, os mostramos
       elementos[i].classList.remove('d-none');
     } else {
-      // Si los elementos están visibles, los ocultamos
+      // Se os elementos estao visiveis, os ocultamos
       elementos[i].classList.add('d-none');
     }
   }
@@ -45,10 +45,10 @@ document.getElementById('botaoVerMaisAprovados').addEventListener('click', funct
   let elementos = document.getElementsByClassName('ver-mais-aprovados');
   for (let i = 0; i < elementos.length; i++) {
     if (aprovadosOcultos) {
-      // Si los elementos están ocultos, los mostramos
+      // Se os elementos estao ocultos, os mostramos
       elementos[i].classList.remove('d-none');
     } else {
-      // Si los elementos están visibles, los ocultamos
+      // Se os elementos estao visiveis, os ocultamos
       elementos[i].classList.add('d-none');
     }
   }
