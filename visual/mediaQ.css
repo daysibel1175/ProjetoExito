@@ -104,7 +104,15 @@ footer{
 }
     }
 
-    @media screen and (max-width:870px){
+    @media screen and (max-width:870px)
+{
+.navbar-brand{
+      height:50%;
+      padding: 0;
+      flex: 1;
+      width: 80%;
+    }
+
       #four .tab-content{
         width: auto;
         align-items: center;
