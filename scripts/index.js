@@ -54,6 +54,7 @@ document.getElementById('botaoVerMaisAprovados').addEventListener('click', funct
   }
   aprovadosOcultos = !aprovadosOcultos;
 });
+window.addEventListener('resize', ocultarElementos);
 
 });
 
