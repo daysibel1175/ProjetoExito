@@ -1,63 +1,58 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 // botao de ver mais
 
-let elementosOcultos = false;
-
-window.onload = function() {
-  if (window.innerWidth < 821) { // Se a tela for pequena 
-    let elementos = document.getElementsByClassName('ver-mais');
-    for (let i = 0; i < elementos.length; i++) {
-      elementos[i].classList.add('d-none');
-    }
-    elementosOcultos = true;
-  }
-}
-
-document.getElementById('botaoVerMais').addEventListener('click', function() {
-  let elementos = document.getElementsByClassName('ver-mais');
-  for (let i = 0; i < elementos.length; i++) {
-    if (elementosOcultos) {
-      // Se os elementos estao ocultos, os mostramos
-      elementos[i].classList.remove('d-none');
-    } else {
-      // Se os elementos estao visiveis, os ocultamos
-      elementos[i].classList.add('d-none');
-    }
-  }
-  elementosOcultos = !elementosOcultos;
-});
-
-// botao ver mais aprovados
-
 let aprovadosOcultos = false;
+let maisOcultos = false;
 
 window.onload = function() {
-  if (window.innerWidth < 821) { 
-    let elementos = document.getElementsByClassName('ver-mais-aprovados');
-    for (let i = 0; i < elementos.length; i++) {
-      elementos[i].classList.add('d-none');
+  if (window.innerWidth < 871) { 
+    let elementosAprovados = document.getElementsByClassName('ver-mais-aprovados');
+    let elementosMais = document.getElementsByClassName('ver-mais');
+    for (let i = 0; i < elementosAprovados.length; i++) {
+      elementosAprovados[i].classList.add('d-none');
+    }
+    for (let i = 0; i < elementosMais.length; i++) {
+      elementosMais[i].classList.add('d-none');
     }
     aprovadosOcultos = true;
+    maisOcultos = true;
   }
 }
 
 document.getElementById('botaoVerMaisAprovados').addEventListener('click', function() {
-  let elementos = document.getElementsByClassName('ver-mais-aprovados');
+  toggleElementos('ver-mais-aprovados', this);
+});
+
+document.getElementById('botaoVerMais').addEventListener('click', function() {
+  toggleElementos('ver-mais', this);
+});
+
+window.addEventListener('resize', ocultarElementos);
+
+function toggleElementos(clase, boton) {
+  let elementos = document.getElementsByClassName(clase);
+  let ocultos = (clase === 'ver-mais-aprovados') ? aprovadosOcultos : maisOcultos;
   for (let i = 0; i < elementos.length; i++) {
-    if (aprovadosOcultos) {
+    if (ocultos) {
       // Se os elementos estao ocultos, os mostramos
       elementos[i].classList.remove('d-none');
+      // muda o texto a 'Ver menos'
+      boton.textContent = 'Ver menos';
     } else {
       // Se os elementos estao visiveis, os ocultamos
       elementos[i].classList.add('d-none');
+      // muda o texto a 'Ver más'
+      boton.textContent = 'Ver mais';
     }
   }
-  aprovadosOcultos = !aprovadosOcultos;
-});
-window.addEventListener('resize', ocultarElementos);
+  if (clase === 'ver-mais-aprovados') {
+    aprovadosOcultos = !aprovadosOcultos;
+  } else {
+    maisOcultos = !maisOcultos;
+  }
+}
 
-});
-
+})
 
 
 

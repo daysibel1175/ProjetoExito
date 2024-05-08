@@ -92,20 +92,27 @@
     width: 100%;
     border: 0.1rem solid #c4c4c4;
   }
+
   .botonVerMaisContainer {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  #cards-depoimentos .card .card-title{
+    font-size: 12px;
+  }
   #cards-nossos-aprovados {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     justify-items: center;
   }
   #cards-nossos-aprovados .card {
     width: 100%;
+  }
+  #cards-nossos-aprovados .card .card-text, #cards-nossos-aprovados .card p{
+    font-size: 10px;
   }
   #ten {
     flex-direction: column;
@@ -230,5 +237,6 @@
   #rodape {
     width: 100%;
     padding: 0.2rem;
+    font-size: small;
   }
 }
